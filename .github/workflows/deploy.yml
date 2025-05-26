@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run TypeScript build
+      - name: Run project build
         run: npm run build
 
       - name: Run tests
@@ -33,8 +33,8 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
-          source: "dist/*"
-          target: "${{ secrets.EC2_PATH }}/dist"
+          # source: "dist/*"
+          # target: "${{ secrets.EC2_PATH }}/dist"
 
       - name: Restart app via SSH
         uses: appleboy/ssh-action@v1.0.0
