@@ -44,5 +44,5 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           # script: |
           #   cd ${{ secrets.EC2_PATH }}
-          #   pm2 reload app || pm2 start dist/app.js --name app
+          #   pm2 reload app || pm2 start app.js --name app
           # another comment
